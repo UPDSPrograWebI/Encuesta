@@ -1,0 +1,22 @@
+<div class="container">
+  <!--este es el inicio de container-->
+  <div class="row">
+
+    {{#each model as |encuesta|}}
+      <div class="col-sm-4">
+        <h1>{{encuesta.nombre}}</h1>
+
+        {{#each encuesta.preguntas as |pregunta|}}
+          <p>{{pregunta}}</p>
+        {{/each}}
+      </div>
+    {{/each}}
+
+    <img src="/assets/img/upds.png" />
+
+    <button {{action "crear_encuesta"}}>Crear Encuesta</button>
+
+  </div>
+
+  <!--este es el fin container-->
+</div>
